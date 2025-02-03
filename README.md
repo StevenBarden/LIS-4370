@@ -40,7 +40,18 @@ A **bar chart** was generated to visualize the poll results, showing how candida
 
 ## **GitHub Repository**
 The full **R script** is available in my GitHub repository:  
-🔗 [GitHub Link Placeholder]  
+
+### **A Table Breakdown of the Results**
+🔗 [Formatted_Output.htm](https://github.com/StevenBarden/LIS-4370/blob/main/Formatted_Output.htm)  
+
+### **RStudio Compiled Output**
+🔗 [Module03.html](https://github.com/StevenBarden/LIS-4370/blob/main/Module03.html)  
+
+### **R Code File**
+🔗 [RStudio_Compiled_Module03.R](https://github.com/StevenBarden/LIS-4370/blob/main/RStudio_Compiled_Module03.R)  
+
+### **Execution Output**
+🔗 [RStudio_Compiled_Module03.R](https://github.com/StevenBarden/LIS-4370/blob/main/RStudio_Compiled_Module03.R)  
 
 ## **Conclusion**
 This dataset provides a **fictional** yet structured look at polling numbers in a **2016-style election scenario**. While polling numbers suggest **Donald Trump had a strong lead**, the discrepancies between different polling agencies highlight how results can **vary based on methodology and sample selection**. Understanding how polls are structured and analyzed is crucial for making **data-driven interpretations in political science and statistics**.  
