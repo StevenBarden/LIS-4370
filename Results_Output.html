@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Script Execution Output</title>
+    <style>
+        body { font-family: Courier, monospace; background-color: #f5f5f5; margin: 20px; }
+        pre { background: #333; color: #fff; padding: 15px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>R Script Execution Output</h1>
+    <pre>
+> source("D:/College/USF-Spring-2025/4370/Module03/Code/Module03.R", echo=TRUE)
+
+> # =====================================================================================
+> # Title:        Module 3 - Data Frame Assignment
+> # Filename:     module.R
+> # Author:       Steven Barden
+> # Created:      2025-02-02
+> # Updated:      2025-02-02
+> # Version:      1.0.0
+> # Description:  Analyzing a fictional 2016 election poll dataset using data frames.
+> # Dependencies: Requires ggplot2, dplyr, tibble, and methods.
+> # License:      MIT
+> # Contact:      StevenBarden@USF.edu
+> # =====================================================================================
+
+> # Function to check and install missing libraries
+> check_libraries <- function() {
++   missing_libraries <- required_libraries[!(required_libraries %in% installed.packages()[,"Package"])]
++ 
++   if (length(missing_libraries) > 0) {
++       cat("Missing libraries detected. Please install them manually.
+")
++       cat(sprintf("install.packages(c('%s'))
+", paste(missing_libraries, collapse="', '")))
++       stop("Exiting due to missing dependencies.")
++   }
++ }
+
+> check_libraries() # Ensure all required libraries are installed
+
+> # Load required libraries
+> library(ggplot2)
+
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> library(tibble)
+
+> library(methods)
+
+> # -------------------------
+> # Class Definition: PollData
+> # -------------------------
+> # A class to encapsulate election poll data, validation, and operations
+
+> # -------------------------
+> # Main Execution
+> # -------------------------
+> tryCatch({
++   cat("Starting election poll analysis...
+")
++ 
++   # Create an instance of PollData
++   poll_analysis <- PollData$new()
++ 
++   # Display summary statistics
++   poll_analysis$display_summary()
++ 
++   # Generate visualization
++   poll_analysis$visualize_poll_results()
++ 
++   cat("Script execution completed successfully.
+")
++ 
++ }, error = function(e) {
++   cat("An error occurred:", conditionMessage(e), "
+")
++ })
+
+Starting election poll analysis...
+Initializing PollData object...
+Validating dataset...
+Data validation passed.
+Displaying summary statistics:
+  Candidate            ABC_Poll        CBS_Poll    
+ Length:7           Min.   : 2.00   Min.   : 1.00  
+ Class :character   1st Qu.: 9.00   1st Qu.:15.50  
+ Mode  :character   Median :15.00   Median :19.00  
+                    Mean   :24.14   Mean   :27.14  
+                    3rd Qu.:36.00   3rd Qu.:32.00  
+                    Max.   :62.00   Max.   :75.00  
+Generating poll results visualization...
+Script execution completed successfully.
+>
+</pre>
+</body>
+</html>
